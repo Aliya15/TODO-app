@@ -6,8 +6,8 @@ const routes: Routes = [
     path: "",
     pathMatch: "full",
     loadChildren: () =>
-      import("./pages/main-page/form.module").then(
-        (m) => m.FormModule
+      import("./pages/main-page/todo.module").then(
+        (m) => m.TodoModule
       ),
   },
   { path: "**", redirectTo: "" },
