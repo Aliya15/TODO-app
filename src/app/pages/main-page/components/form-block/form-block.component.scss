@@ -1,5 +1,39 @@
+@import 'src/assets/styles/variables/colors';
+
 .todo-form {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  .form-row {
+    display: flex;
+
+    button {
+      margin-left: 10px;
+      align-items: center;
+      background: $light-1;
+      border: 0 solid #E2E8F0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-sizing: border-box;
+      color: $dark-2;
+      display: inline-flex;
+      font-size: 1rem;
+      height: 42px;
+      justify-content: center;
+      line-height: 24px;
+      overflow-wrap: break-word;
+      padding: 18px;
+      text-decoration: none;
+      width: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    button:active {
+      background: $grey-1;
+    }
+  }
 }

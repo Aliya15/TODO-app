@@ -1,4 +1,13 @@
-<div class="todo-card">
-  <h2>TODO List</h2>
-  <app-form-block [questions]="questions$ | async"></app-form-block>
+<div class="block">
+  <div class="todo-card">
+    <div class="todo-card__form">
+      <div class="todo-card__background"></div>
+      <h2>TODO</h2>
+      <app-form-block [questions]="questions$ | async"></app-form-block>
+    </div>
+
+    <div *ngIf="todoList$ | async as todoList" class="todo-card__list">
+      <app-todo-list *ngFor="let todoListItem of todoList" [todoItem]="todoListItem"></app-todo-list>
+    </div>
+  </div>
 </div>

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {of} from "rxjs";
-import {QuestionBase} from "../../components/question-base/question-base";
-import {TextBoxQuestion} from "../../components/question-base/question-textbox";
-import {QuestionDropdown} from "../../components/question-base/question-dropdown";
+import {QuestionBase} from "../../model/question-base/question-base";
+import {TextBoxQuestion} from "../../model/question-base/question-textbox";
+import {QuestionDropdown} from "../../model/question-base/question-dropdown";
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +25,8 @@ export class QuestionService {
       }),
 
       new TextBoxQuestion({
-        key: 'newNote',
-        label: 'New note',
+        key: 'title',
+        label: 'title',
         type: 'text',
         required: true,
         order: 1

@@ -1,1 +1,7 @@
-<p>todo-list works!</p>
+<app-card>
+  <label class="list-item">
+    <input type="checkbox" [checked]="todoItem?.completed" [id]="todoItem?.id" (click)="changeTodoItemStatus()">
+    <span class="list-item__checked"></span>
+    <span [class.list-item__completed]="todoItem?.completed">{{todoItem?.title}}</span>
+  </label>
+</app-card>

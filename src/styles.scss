@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/styles/variables/colors';
+
+:root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: $grey-2;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}

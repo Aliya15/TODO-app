@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {QuestionBase} from "../question-base/question-base";
+import {QuestionBase} from "../../model/question-base/question-base";
 import {FormGroup} from "@angular/forms";
 
 @Component({
@@ -10,6 +10,4 @@ import {FormGroup} from "@angular/forms";
 export class FormQuestionComponent {
   @Input() question!: QuestionBase<string>;
   @Input() form!: FormGroup;
-
-  // get isValid() { return this.form.controls[this.question.key].valid; }
 }

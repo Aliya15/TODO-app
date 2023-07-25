@@ -8,23 +8,21 @@ import {CommonModule} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ReactiveFormsModule } from '@angular/forms';
 import {StoreModule} from "@ngrx/store";
-import {EffectsModule} from "@ngrx/effects";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    CommonModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot({}),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        CommonModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        StoreModule.forRoot({}),
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
