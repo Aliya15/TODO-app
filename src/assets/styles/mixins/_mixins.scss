@@ -1,0 +1,17 @@
+
+@mixin reset-button {
+  background: unset;
+  border: none;
+}
+
+@mixin flex-align($x: 0, $y: 0) {
+  display: flex;
+
+  @if $x != 0 {
+    align-items: $x;
+  }
+
+  @if $y != 0 {
+    justify-content: $y;
+  }
+}

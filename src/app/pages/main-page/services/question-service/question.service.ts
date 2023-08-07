@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {of} from "rxjs";
 import {QuestionBase} from "../../model/question-base/question-base";
 import {TextBoxQuestion} from "../../model/question-base/question-textbox";
@@ -16,9 +16,9 @@ export class QuestionService {
         key: 'priority',
         label: 'Priority',
         options: [
-          {key: 'none',  value: 'None'},
-          {key: 'low',  value: 'Low'},
-          {key: 'medium',   value: 'Medium'},
+          {key: 'none', value: 'None'},
+          {key: 'low', value: 'Low'},
+          {key: 'medium', value: 'Medium'},
           {key: 'high', value: 'High'}
         ],
         order: 2

@@ -7,3 +7,8 @@ export const selectTodoList = createSelector(
   selectFeature,
   (state: TODOState) => state.todoList
 );
+
+export const selectTodoListFilter = createSelector(
+  selectFeature,
+  (state: TODOState) => state.todoListFilter
+);

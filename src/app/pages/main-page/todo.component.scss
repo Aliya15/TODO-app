@@ -1,16 +1,15 @@
 @import "src/assets/styles/variables/colors";
+@import "src/assets/styles/mixins/mixins";
+
 .block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-align(center, center);
 
   .todo-card {
+    @include flex-align(flex-start);
     position: absolute;
     width: 400px;
     min-height: 500px;
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
     margin: 100px auto 0;
     transition: 0.2s;
     top: 0;
@@ -31,12 +30,14 @@
     &__list {
       width: 100%;
       gap: 10px;
-      display: flex;
+      @include flex-align();
       flex-direction: column;
       background-color: $light-1;
       border-radius: 8px;
       margin-top: 10px;
       z-index: 2;
+      max-height: calc(100vh - 320px);
+      overflow: auto;
     }
 
     ::-webkit-scrollbar {
@@ -71,10 +72,3 @@
   }
 }
 
-#navbar-inverse {
-  .todo-card {
-    &__background {
-      height: 15vh;
-    }
-  }
-}

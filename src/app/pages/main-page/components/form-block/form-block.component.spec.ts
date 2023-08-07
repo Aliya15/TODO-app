@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FormBlockComponent } from './form-block.component';
+import {FormBlockComponent} from './form-block.component';
 
 describe('FormBlockComponent', () => {
   let component: FormBlockComponent;
@@ -8,9 +8,9 @@ describe('FormBlockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormBlockComponent ]
+      declarations: [FormBlockComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FormBlockComponent);
     component = fixture.componentInstance;

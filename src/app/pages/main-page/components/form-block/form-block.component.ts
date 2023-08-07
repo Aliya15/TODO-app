@@ -9,14 +9,15 @@ import {addTODOItemAction} from "../../store/todo-form.actions";
   selector: 'app-form-block',
   templateUrl: './form-block.component.html',
   styleUrls: ['./form-block.component.scss'],
-  providers: [ QuestionControlService ]
+  providers: [QuestionControlService]
 })
 export class FormBlockComponent {
 
   @Input() questions: QuestionBase<string>[] | null = [];
   form!: FormGroup;
 
-  constructor(private _qcs: QuestionControlService, private _store: Store) {}
+  constructor(private _qcs: QuestionControlService, private _store: Store) {
+  }
 
   ngOnInit() {
     this.form = this._qcs.toFormGroup(this.questions as QuestionBase<string>[]);

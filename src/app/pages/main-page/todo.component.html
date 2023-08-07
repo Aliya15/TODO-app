@@ -1,13 +1,22 @@
 <div class="block">
   <div class="todo-card">
+
     <div class="todo-card__form">
       <div class="todo-card__background"></div>
       <h2>TODO</h2>
       <app-form-block [questions]="questions$ | async"></app-form-block>
     </div>
 
-    <div *ngIf="todoList$ | async as todoList" class="todo-card__list">
-      <app-todo-list *ngFor="let todoListItem of todoList" [todoItem]="todoListItem"></app-todo-list>
-    </div>
+    <ng-container *ngIf="filters$ | async as currentFilter">
+      <ng-container *ngIf="todoList$ | async as todoList">
+        <div class="todo-card__list">
+          <ng-container *ngFor="let todoListItem of todoList | todoListFilter : currentFilter">
+            <app-todo-list-item [todoItem]="todoListItem"></app-todo-list-item>
+          </ng-container>
+        </div>
+        <app-todo-list-filter *ngIf="todoList.length"></app-todo-list-filter>
+      </ng-container>
+    </ng-container>
+
   </div>
 </div>

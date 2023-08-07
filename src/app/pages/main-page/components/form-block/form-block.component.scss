@@ -1,9 +1,9 @@
 @import 'src/assets/styles/variables/colors';
+@import "src/assets/styles/mixins/mixins";
 
 .todo-form {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  @include flex-align(flex-end, center);
 
   .form-row {
     display: flex;
@@ -34,6 +34,10 @@
 
     button:active {
       background: $grey-1;
+    }
+
+    button:hover {
+      background-color: $light-2;
     }
   }
 }
