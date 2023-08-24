@@ -1,0 +1,22 @@
+@import "src/assets/styles/mixins/mixins";
+@import "src/assets/styles/variables/colors";
+
+:host {
+  width: 100%;
+  background: $light-1;
+}
+
+.todo-filters-block {
+  @include flex-align(center, space-between);
+  padding: 20px 5px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.todo-filters {
+
+  &__button {
+    @include reset-button;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+<app-card *ngIf="todoItem">
+  <label class="list-item">
+    <input (click)="changeTodoItemStatus()" [checked]="todoItem.completed" [id]="todoItem.id" type="checkbox">
+    <span class="list-item__checked"></span>
+    <p [class.list-item__completed]="todoItem.completed">{{todoItem.title}}</p>
+  </label>
+  <div class="item-actions">
+    <img [src]="todoItem.priority ? priorityIcons[todoItem.priority] : priorityIcons['low']">
+    <button (click)="deleteItem()" class="item-actions__delete-button"><img src="assets/images/icons/delete.svg">
+    </button>
+  </div>
+</app-card>

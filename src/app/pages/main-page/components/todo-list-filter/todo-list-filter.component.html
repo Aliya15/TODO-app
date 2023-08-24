@@ -1,0 +1,9 @@
+<div class="todo-filters-block">
+  <div class="todo-filters">
+    <button class="todo-filters__button" (click)="changeTodoFilter(filtersList)"
+            *ngFor="let filtersList of todoFiltersList">
+      {{filtersList}}
+    </button>
+  </div>
+  <button class="todo-filters__button" (click)="clearCompletedItems()">Clear Completed</button>
+</div>

@@ -1,0 +1,74 @@
+@import "src/assets/styles/variables/colors";
+@import "src/assets/styles/mixins/mixins";
+
+.block {
+  @include flex-align(center, center);
+
+  .todo-card {
+    @include flex-align(flex-start);
+    position: absolute;
+    width: 400px;
+    min-height: 500px;
+    flex-direction: column;
+    margin: 100px auto 0;
+    transition: 0.2s;
+    top: 0;
+
+    &__background {
+      background: linear-gradient(45deg, $purple-1, $purple-2);
+      height: 32vh;
+      width: 100vw;
+      top: 0;
+      z-index: -1;
+      position: fixed;
+      left: 0;
+      min-height: 15vh;
+      transition-duration: 1s;
+      transition-property: height;
+    }
+
+    &__list {
+      width: 100%;
+      gap: 10px;
+      @include flex-align();
+      flex-direction: column;
+      background-color: $light-1;
+      border-radius: 8px;
+      margin-top: 10px;
+      z-index: 2;
+      max-height: calc(100vh - 320px);
+      overflow: auto;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: $grey-2;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: $grey-3;
+      border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: $grey-3;
+    }
+
+    &__list app-todo-list {
+      border-bottom: 1px solid $grey-3;
+    }
+
+    &__list app-todo-list:last-child {
+      border: none;
+    }
+
+    h2 {
+      color: $light-1;
+      text-align: left;
+    }
+  }
+}
+

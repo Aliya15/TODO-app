@@ -1,0 +1,14 @@
+<div [formGroup]="form" class="question-block">
+
+  <div [ngSwitch]="question.controlType" class="question-block__item">
+
+    <input *ngSwitchCase="'textbox'" [formControlName]="question.key"
+           [id]="question.key" [type]="question.type" placeholder="What do you need to do?">
+
+    <select *ngSwitchCase="'dropdown'" [formControlName]="question.key" [id]="question.key">
+      <option disabled hidden selected value="">Priority</option>
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+
+  </div>
+</div>

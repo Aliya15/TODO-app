@@ -1,0 +1,11 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" class="todo-form">
+    <div class="form-row">
+      <app-form-question *ngFor="let question of questions" [form]="form" [question]="question"></app-form-question>
+    </div>
+
+    <div class="form-row">
+      <button [disabled]="!form.valid" type="submit">Add</button>
+    </div>
+  </form>
+</div>
